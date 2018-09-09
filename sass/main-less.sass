@@ -1,0 +1,341 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+html
+	font-size: 10px
+
+body 
+	box-sizing: border-box
+	font-family: 'Open sans' sans-serif
+.text-center
+	text-align: center
+.bottom-nav-wrap
+  .bottom-nav
+    padding-bottom: 4.5rem
+    width: 100%
+    &:nth-child(2)
+      float: right
+    a
+      display: inline-block
+      width: 100%
+      height: 100%
+      padding: 3rem 1rem
+      font-size: 5rem
+      font-weight: bold
+      text-decoration: none
+      color: #046fa1
+      border-radius: 10px 
+      border: 1px #046fa1 solid
+.bottom-nav-item-1
+  transition: all 0.5s ease
+  &:hover
+    transform: translateX(-100px)
+.bottom-nav-item-2
+  transition: all 0.5s ease
+  &:hover
+    transform: translateX(100px)
+
+
+.header-container
+	background: #EECDA3  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #EF629F, #EECDA3)  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #EF629F, #EECDA3) /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	border-bottom: 2px #046fa1 solid
+.header
+	padding: 1rem 0
+	&-logo
+		display: inline-block
+		img
+			height: 12rem
+	/* Десктопное меню */
+	&-nav
+		ul
+			float: right
+			margin: 0
+		li
+			display: inline-block
+			margin-right: 7rem
+			a
+				display: inline-block
+				position: relative
+				font-size: 1.6rem
+				color: #046fa1
+				font-weight: bold
+				padding: 47px 0
+				border-bottom: 2px rgba(26,145,201, 0) solid
+				transition: 0.3s all ease
+				&:hover
+					text-decoration: none
+					border-bottom: 2px rgba(26,145,201, 1) solid
+				span
+					position: absolute
+					right: 50%	
+					transform: translate(50%, -400%)
+					transition: 0.4s all ease
+				&:hover span
+						transform: translate(50%, -110%)
+/* Главный контент */
+.main 
+	&-content
+		padding-top: 10rem
+		h1
+			font-size: 	4rem
+			color: #046fa1
+			span
+				display: block	
+				font-size: 	7rem
+		margin-bottom: 20%
+.bottom-btn
+	margin-bottom: 50px
+	display: inline-block
+	width: 40px
+	height: 40px
+	border: 2px #046fa1 solid
+	transform: rotate(45deg)
+	bottom: 0
+	padding: 3px
+	text-align: center
+	transition: all 0.3s ease
+	&:hover
+		transform: rotate(225deg)
+	span
+		display: inline-block
+		border: 6px #fff solid
+		width: 30px
+		height: 30px
+		border-left: none
+		border-top: none
+		&:hover
+			border: 6px #046fa1 solid
+
+
+/* Моб меню */
+.header-toggle-menu
+	position: relative
+	line-height: 100%
+
+#toggle
+  display: block
+  width: 28px
+  height: 30px
+  float: right
+  span 
+    &:after, &:before 
+      content: ""
+      position: absolute
+      left: 0
+      top: -9px
+    
+    &:after 
+      top: 9px
+      width: 100%
+      height: 5px
+      background-color: #046fa1
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+    
+    position: relative
+    display: block
+    width: 100%
+    height: 5px
+    background-color: #046fa1
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+    &:before 
+      width: 100%
+      height: 5px
+      background-color: #046fa1
+      transition: all 0.3s
+      backface-visibility: hidden
+      border-radius: 2px
+  &.on 
+    span 
+      background-color: transparent
+      &:before 
+        transform: rotate(45deg) translate(5px, 5px)
+      
+      &:after 
+        transform: rotate(-45deg) translate(7px, -8px)
+      
+    
+    + #menu 
+      opacity: 1
+      visibility: visible
+#menu 
+  position: absolute
+  z-index: 1000
+  color: #999
+  width: 180px
+  padding: 10px
+  right: -10px
+  top: 35px
+  font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS", Verdana, "Verdana Ref", sans-serif
+  text-align: right
+  border-radius: 4px
+  background: white
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.05)
+  /* just for this demo */
+  opacity: 0
+  visibility: hidden
+  transition: opacity .4s
+  &:after 
+    position: absolute
+    top: -15px
+    left: 140px
+    content: ""
+    display: block
+    border-left: 15px solid transparent
+    border-right: 15px solid transparent
+    border-bottom: 20px solid white
+#menu
+	ul 
+		list-style: none
+		display: block
+		margin: 0
+		padding: 0
+		li 
+		  list-style: none
+		  display: block
+		  margin: 0
+		  padding: 0
+		  a 
+		    list-style: none
+		    display: block
+		    margin: 0
+		    padding: 11px
+		    text-decoration: none
+		    transition: all .2s
+		    font-size: 1.6rem
+				color: #046fa1
+				font-weight: bold
+				&:hover
+.lesson 
+	padding-top: 12rem
+	h2
+		margin: 7rem 0
+		font-weight: bold
+	h3
+		margin: 4rem 0
+		font-weight: bold
+	li
+		max-width: 38rem
+		line-height: 4rem
+		font-size: 2rem	
+		border-bottom: 1px #046fa1 solid
+.video
+  iframe
+    width: 100%
+    height: 315px
+    max-width: 560px
+/* Домашняя работа */
+.image
+  display: inline-block
+  vertical-align: top
+  width: 200px
+  height: 200px
+  margin-bottom: 2rem
+
+.image-one
+  background: url(../img/les201.jpg) center no-repeat
+  background-size: cover
+  overflow: hidden
+  position: relative
+  .caption
+  	padding: 40%
+  	color: #fff
+  	position: absolute
+  	width: 100%
+  	height: 100%
+  	background: rgba(0, 0, 0, 0.4)
+  	top: 100%
+  	transition: all 0.5s ease
+.image-one:hover .caption
+	top: 0
+
+.image-two
+  background: url(../img/les202.jpg) center no-repeat
+  background-size: cover
+  background-size: cover
+  overflow: hidden
+  position: relative
+  .caption
+  	padding: 40%
+  	color: #fff
+  	position: absolute
+  	width: 100%
+  	height: 100%
+  	background: rgba(0, 0, 0, 0.4)
+  	left: 100%
+  	transition: all 0.5s ease
+.image-two:hover .caption
+	left: 0
+
+.image-three
+  background: url(../img/les203.jpg) center no-repeat
+  background-size: cover
+  background-size: cover
+  overflow: hidden
+  position: relative
+  .caption
+  	padding: 40%
+  	color: #fff
+  	position: absolute
+  	width: 100%
+  	height: 100%
+  	background: rgba(0, 0, 0, 0.4)
+  	right: 100%
+  	transition: all 0.5s ease
+.image-three:hover .caption
+	right: 0
+
+.image-four
+  background: url(../img/les204.jpg) center no-repeat
+  background-size: cover
+  background-size: cover
+  overflow: hidden
+  position: relative
+  .caption
+  	padding: 40%
+  	color: #fff
+  	position: absolute
+  	width: 100%
+  	height: 100%
+  	background: rgba(0, 0, 0, 0.4)
+  	bottom: 100%
+  	transition: all 0.5s ease
+.image-four:hover .caption
+	bottom: 0
+
+.button-one
+  border: none
+  font-weight: 700
+  font-size: 14px
+  color: white
+  padding: 0.8em 1em calc(.8em + 3px)
+  border-radius: 3px
+  background: rgb(64, 199, 129)
+  box-shadow: 0 -3px rgb(53, 167, 110) inset
+  transition: 0.2s
+  margin: 10rem
+  &:hover
+  	transform: translateY(-10px)
+  	box-shadow: 0 -6px rgb(53, 167, 110) inset
+  &:focus
+
+.button-two
+  display: inline-block
+  color: white
+  padding: .5em 2em
+  border: none
+  border-width: 2px 0
+  border-style: solid none
+  border-color: #FDBE33 #000 #D77206
+  border-radius: 6px
+  background: linear-gradient(#F3AE0F, #E38916) #E38916
+  transition: 0.2s
+  margin: 10rem
+
+@import "media"
